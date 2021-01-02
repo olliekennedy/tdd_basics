@@ -55,11 +55,15 @@ RSpec.describe Calculator do
 
   describe "#greeting" do
     it "selects a greeting from a list, randomly" do
+      allow(subject).to receive(:rand).and_return(2)
+      expect(subject.greeting).to eq "Hello"
     end
   end
 
   describe "#happy_number?" do
     it "takes a number and tells you whether or not the number is happy" do
+      allow(subject).to receive(:rand).and_return(0)
+      expect(subject.happy_number?(6)).to eq false
     end
   end
 end

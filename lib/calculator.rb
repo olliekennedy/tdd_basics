@@ -12,4 +12,14 @@ class Calculator
   def random_add(num, options = [1,2,3,4,5,6,7,8,9,10])
     num + options.sample
   end
+
+  def greeting
+    greetings = ["Hi", "Good morning", "Hello"]
+    greetings[rand(3)]
+  end
+
+  def happy_number?(number)
+    random_number = rand(2)
+    return random_number == 1
+  end
 end
